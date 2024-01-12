@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Bricolage_Grotesque } from "next/font/google";
-import { JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Bricolage_Grotesque } from "next/font/google";
 import "@/styles//globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers";

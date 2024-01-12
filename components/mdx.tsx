@@ -8,7 +8,7 @@ const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "font-heading text-heading my-10 text-5xl font-extrabold leading-[1.1] tracking-tight",
+        "font-heading text-heading font-bold text-[3rem] xs:text-[3.4rem] md:text-[3.8rem] leading-[1.15] tracking-[-0.075em] my-6",
         className
       )}
       {...props}
@@ -17,7 +17,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading text-heading my-8 text-4xl font-bold leading-[1.1] tracking-tight",
+        "font-heading text-heading font-bold text-[2.2rem] xs:text-[2.5rem] md:text-[3rem] leading-[1.15] tracking-[-0.05em] my-6",
         className
       )}
       {...props}
@@ -26,7 +26,7 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "font-heading text-heading my-6 text-3xl font-semibold leading-[1.1] tracking-tight",
+        "font-heading text-heading font-bold text-[1.5rem] xs:text-[1.7rem] md:text-[1.875rem] leading-[1.25] tracking-[-0.025em] my-6 ",
         className
       )}
       {...props}
@@ -35,7 +35,7 @@ const components = {
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4
       className={cn(
-        "font-heading text-card-foreground mt-12 scroll-m-20 text-xl pb-2 font-medium tracking-tight",
+        "font-heading text-heading font-semibold leading-tighter tracking-tight my-6 text-2xl",
         className
       )}
       {...props}
@@ -69,7 +69,13 @@ const components = {
     />
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className={cn("leading-7 my-4", className)} {...props} />
+    <p
+      className={cn(
+        "text-base leading-[1.85rem] my-4 tracking-[-0.01em] md:tracking-tight md:text-[1.125rem] md:leading-8",
+        className
+      )}
+      {...props}
+    />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul

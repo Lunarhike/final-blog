@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import typography from "@tailwindcss/typography";
 
 const config: Config = {
   darkMode: ["class"],
@@ -14,10 +13,38 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "1.2rem",
+      padding: "1.6rem",
       screens: {
         "2xl": "1280px",
       },
+    },
+    screens: {
+      xs: "480px",
+      sm: "600px",
+      md: "768px",
+      lg: "1024px",
+      "2xl": "1280px",
+    },
+    aspectRatio: {
+      auto: "auto",
+      square: "1 / 1",
+      video: "16 / 9",
+      1: "1",
+      2: "2",
+      3: "3",
+      4: "4",
+      5: "5",
+      6: "6",
+      7: "7",
+      8: "8",
+      9: "9",
+      10: "10",
+      11: "11",
+      12: "12",
+      13: "13",
+      14: "14",
+      15: "15",
+      16: "16",
     },
     extend: {
       fontFamily: {
@@ -25,8 +52,9 @@ const config: Config = {
         code: ["var(--font-code)"],
         heading: ["var(--font-heading)"],
       },
-      maxWidth: {
-        "3xl": "726px",
+      fontSize: {
+        "3xl": "1.7rem",
+        "4xl": "2.5rem",
       },
       colors: {
         border: "hsl(var(--border))",

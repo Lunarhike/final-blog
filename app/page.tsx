@@ -23,7 +23,6 @@ export default async function Home() {
 
   return (
     <div className="container relative -top-[10px] flex flex-col gap-8">
-      <ThemeSwitch />
       {posts.map((post) => (
         <Link
           key={post.slug}
@@ -44,6 +43,7 @@ export default async function Home() {
           </article>
         </Link>
       ))}
+      <ThemeSwitch />
     </div>
   );
 }
