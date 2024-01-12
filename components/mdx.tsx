@@ -17,7 +17,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading text-heading font-bold text-[2.2rem] xs:text-[2.5rem] md:text-[3rem] leading-[1.15] tracking-[-0.03em] mb-6 mt-8",
+        "font-heading text-heading font-bold text-[2.2rem] xs:text-[2.5rem] md:text-[3rem] leading-[1.15] tracking-[-0.03em] mb-6 mt-10",
         className
       )}
       {...props}
@@ -26,7 +26,7 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "font-heading text-heading font-bold text-[1.5rem] xs:text-[1.7rem] md:text-[1.875rem] leading-[1.25] tracking-[-0.025em] mb-6 mt-8 ",
+        "font-heading text-heading font-bold text-[1.5rem] xs:text-[1.7rem] md:text-[1.875rem] leading-[1.25] tracking-[-0.025em] mb-6 mt-10 ",
         className
       )}
       {...props}
