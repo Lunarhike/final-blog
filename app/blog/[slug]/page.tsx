@@ -47,7 +47,7 @@ export default async function PostPage({ params }) {
   const authorsInfo = await getAuthorDetails(data.authors);
 
   return (
-    <main className="container flex flex-col items-center py-6 lg:py-12">
+    <main className="container py-6 lg:py-12">
       <div className="max-w-[720px]">
         {data.publishedAt && (
           <time
@@ -57,7 +57,7 @@ export default async function PostPage({ params }) {
             Published on {formatDate(data.publishedAt)}
           </time>
         )}
-        <h1 className="mt-2 font-heading font-semibold inline-block text-4xl leading-tight tracking-tight lg:text-5xl ">
+        <h1 className="mt-2 font-heading font-semibold inline-block text-4xl leading-10 xs:leading-tight tracking-tight lg:text-5xl ">
           {data.title}
         </h1>
         <div className="mt-4 flex space-x-4">

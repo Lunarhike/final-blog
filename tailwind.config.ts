@@ -18,13 +18,6 @@ const config: Config = {
         "2xl": "1280px",
       },
     },
-    screens: {
-      xs: "480px",
-      sm: "600px",
-      md: "768px",
-      lg: "1024px",
-      "2xl": "1280px",
-    },
     aspectRatio: {
       auto: "auto",
       square: "1 / 1",
