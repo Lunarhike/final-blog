@@ -17,7 +17,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading text-heading font-bold text-[2.2rem] xs:text-[2.5rem] md:text-[3rem] leading-[1.15] tracking-[-0.05em] my-6",
+        "font-heading text-heading font-bold text-[2.2rem] xs:text-[2.5rem] md:text-[3rem] leading-[1.15] tracking-[-0.03em] mb-6 mt-8",
         className
       )}
       {...props}
@@ -26,7 +26,7 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "font-heading text-heading font-bold text-[1.5rem] xs:text-[1.7rem] md:text-[1.875rem] leading-[1.25] tracking-[-0.025em] my-6 ",
+        "font-heading text-heading font-bold text-[1.5rem] xs:text-[1.7rem] md:text-[1.875rem] leading-[1.25] tracking-[-0.025em] mb-6 mt-8 ",
         className
       )}
       {...props}
@@ -78,22 +78,10 @@ const components = {
     />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul
-      className={cn(
-        "my-6 ml-7 [&>li]:!pl-1 list-disc [&>li::marker]:!text-accent",
-        className
-      )}
-      {...props}
-    />
+    <ul className={cn("", className)} {...props} />
   ),
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol
-      className={cn(
-        "my-6 pl-8 list-decimal [&>li::marker]:!text-accent [&>li::marker]:!font-code [&>li::marker]:!text-sm ml-2 [&>li]:!pl-2",
-        className
-      )}
-      {...props}
-    />
+    <ol className={cn("", className)} {...props} />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <li className={cn("mt-2", className)} {...props} />
@@ -153,7 +141,7 @@ const components = {
   pre: ({ className, ...props }) => (
     <pre
       className={cn(
-        "[&>code]:!bg-card [&>code]:!font-normal [&>code:before]:content-none [&>code:after]:content-none overflow-x-auto max-h-[650px] mb-12 mt-8 pl-4 py-4 !bg-card [&>code]:!text-xs sm:[&>code]:!text-sm font-normal rounded",
+        "[&>code]:!bg-card [&>code]:!font-normal [&>code:before]:content-none [&>code:after]:content-none overflow-x-auto max-h-[650px] !bg-card [&>code]:!text-xs sm:[&>code]:!text-sm font-normal rounded",
         className
       )}
       {...props}
