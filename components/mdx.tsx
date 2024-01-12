@@ -8,7 +8,7 @@ const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "font-heading text-card-foreground mt-12 scroll-m-20 pb-2 text-4xl font-medium tracking-tight first:mt-0",
+        "font-heading text-heading my-10 text-5xl font-extrabold leading-[1.1] tracking-tight",
         className
       )}
       {...props}
@@ -17,7 +17,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading text-card-foreground mt-12 pb-2 scroll-m-20 text-3xl font-medium tracking-tight",
+        "font-heading text-heading my-8 text-4xl font-bold leading-[1.1] tracking-tight",
         className
       )}
       {...props}
@@ -26,7 +26,7 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "font-heading text-card-foreground mt-12 scroll-m-20 pb-2 text-2xl font-medium tracking-tight",
+        "font-heading text-heading my-6 text-3xl font-semibold leading-[1.1] tracking-tight",
         className
       )}
       {...props}
@@ -69,10 +69,7 @@ const components = {
     />
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-3", className)}
-      {...props}
-    />
+    <p className={cn("leading-7 my-4", className)} {...props} />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul
@@ -150,7 +147,7 @@ const components = {
   pre: ({ className, ...props }) => (
     <pre
       className={cn(
-        "[&>code]:!bg-card [&>code]:!font-normal [&>code:before]:content-none [&>code:after]:content-none overflow-x-auto max-h-[650px] mb-12 mt-8 pl-4 py-4 border border-zinc-800 !bg-card [&>code]:!text-xs sm:[&>code]:!text-sm font-normal rounded",
+        "[&>code]:!bg-card [&>code]:!font-normal [&>code:before]:content-none [&>code:after]:content-none overflow-x-auto max-h-[650px] mb-12 mt-8 pl-4 py-4 !bg-card [&>code]:!text-xs sm:[&>code]:!text-sm font-normal rounded",
         className
       )}
       {...props}

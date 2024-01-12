@@ -7,7 +7,7 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
-import { Suspense } from "react";
+import rehypeShikiji from "rehype-shikiji";
 
 async function getAuthorDetails(authorsList) {
   // If authorsList is empty or not provided, return an empty array
@@ -88,7 +88,7 @@ export default async function PostPage({ params }) {
           alt={data.title}
           width={650}
           height={650}
-          className="mt-8 mb-4 rounded-md border bg-card transition-colors"
+          className="mt-8 mb-4 rounded-md bg-[#f0f0f0] transition-colors"
           priority
         />
       )}
@@ -100,9 +100,12 @@ export default async function PostPage({ params }) {
               useDynamicImport: true,
               rehypePlugins: [
                 [
-                  rehypePrettyCode,
+                  rehypeShikiji,
                   {
-                    theme: "github-dark-dimmed",
+                    themes: {
+                      dark: "github-dark",
+                      light: "github-light",
+                    },
                   },
                 ],
               ],

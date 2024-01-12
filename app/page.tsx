@@ -1,3 +1,4 @@
+import ThemeSwitch from "@/components/theme-switch";
 import { readdir, readFile } from "fs/promises";
 import matter from "gray-matter";
 import Link from "next/link";
@@ -22,6 +23,7 @@ export default async function Home() {
 
   return (
     <div className="container relative -top-[10px] flex flex-col gap-8">
+      <ThemeSwitch />
       {posts.map((post) => (
         <Link
           key={post.slug}
@@ -29,7 +31,7 @@ export default async function Home() {
           href={"/blog/" + post.slug + "/"}
         >
           <article>
-            <h2 className={["text-3xl font-black font-heading"].join(" ")}>
+            <h2 className={"text-3xl font-heading text-heading"}>
               {post.data.title}
             </h2>
             <p className="text-[13px] text-gray-700 dark:text-gray-300">

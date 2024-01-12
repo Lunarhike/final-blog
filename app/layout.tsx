@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Bricolage_Grotesque } from "next/font/google";
 import { JetBrains_Mono } from "next/font/google";
 import "@/styles//globals.css";
@@ -13,7 +13,7 @@ const onest = Bricolage_Grotesque({
   display: "swap",
   adjustFontFallback: false,
 });
-const inter = Inter_Tight({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
 });
@@ -44,8 +44,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">

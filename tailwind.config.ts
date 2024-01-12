@@ -62,6 +62,9 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        heading: {
+          DEFAULT: "hsl(var(--heading))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
