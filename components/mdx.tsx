@@ -8,7 +8,7 @@ const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "font-heading text-heading font-bold text-[3rem] xs:text-[3.4rem] md:text-[3.8rem] leading-[1.15] tracking-[-0.075em] my-6",
+        "font-heading font-normal text-5xl mb-4 [&:not(:first-child)]:mt-12 tracking-tighter leading-[1.2]",
         className
       )}
       {...props}
@@ -17,7 +17,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading text-heading font-bold text-[2.2rem] xs:text-[2.5rem] md:text-[3rem] leading-[1.15] tracking-[-0.03em] mb-6 mt-10",
+        "font-heading font-normal text-4xl mb-4 [&:not(:first-child)]:mt-10 tracking-tighter leading-[1.2]",
         className
       )}
       {...props}
@@ -26,7 +26,7 @@ const components = {
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
       className={cn(
-        "font-heading text-heading font-bold text-[1.5rem] xs:text-[1.7rem] md:text-[1.875rem] leading-[1.25] tracking-[-0.025em] mb-6 mt-10 ",
+        "font-heading font-normal text-3xl mb-4 [&:not(:first-child)]:mt-8 tracking-tight leading-[1.2]",
         className
       )}
       {...props}
@@ -35,47 +35,29 @@ const components = {
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4
       className={cn(
-        "font-heading text-heading font-semibold leading-tighter tracking-tight my-6 text-2xl",
+        "font-heading font-normal text-2xl mb-4 [&:not(:first-child)]:mt-6 tracking-tight leading-[1.2]",
         className
       )}
       {...props}
     />
   ),
   h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h5
-      className={cn(
-        "font-heading text-card-foreground mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h5 className={cn("font-heading", className)} {...props} />
   ),
   h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h6
-      className={cn(
-        "font-heading text-card-foreground mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h6 className={cn("font-heading", className)} {...props} />
   ),
   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
       className={cn(
-        "font-medium underline underline-offset-4 decoration-accent",
+        "underline underline-offset-4 decoration-accent",
         className
       )}
       {...props}
     />
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p
-      className={cn(
-        "text-base leading-[1.85rem] my-4 tracking-[-0.01em] md:tracking-tight md:text-[1.125rem] md:leading-8",
-        className
-      )}
-      {...props}
-    />
+    <p className={cn("", className)} {...props} />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul className={cn("", className)} {...props} />
@@ -141,7 +123,7 @@ const components = {
   pre: ({ className, ...props }) => (
     <pre
       className={cn(
-        "[&>code]:!bg-card [&>code]:!font-normal [&>code:before]:content-none [&>code:after]:content-none overflow-x-auto max-h-[650px] !bg-card [&>code]:!text-xs sm:[&>code]:!text-sm font-normal rounded",
+        "[&>code]:!bg-card [&>code]:!font-normal [&>code:before]:content-none [&>code:after]:content-none overflow-x-auto !bg-card text-xs sm:text-sm leading-5 sm:leading-6 font-normal rounded",
         className
       )}
       {...props}
@@ -149,10 +131,7 @@ const components = {
   ),
   code: ({ className, ...props }) => (
     <code
-      className={cn(
-        "relative rounded font-code [&>span]:pr-4 after:content-['`'] before:content-['`'] text-sm font-semibold",
-        className
-      )}
+      className={cn("relative font-code font-semibold", className)}
       {...props}
     />
   ),

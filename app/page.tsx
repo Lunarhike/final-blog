@@ -1,8 +1,10 @@
 import ThemeSwitch from "@/components/theme-switch";
 import { readdir, readFile } from "fs/promises";
 import matter from "gray-matter";
-import Link from "next/link";
+import Image from "next/image";
 import path from "path";
+import { formatDate } from "@/lib/utils";
+import Link from "next/link";
 
 export const metadata = {
   title: "Blog Starter - Santiego",
@@ -22,26 +24,26 @@ export default async function Home() {
   });
 
   return (
-    <div className="container relative -top-[10px] flex flex-col gap-8">
+    <div className="container grid grid-cols-3 gap-8 relative">
       {posts.map((post) => (
-        <Link
-          key={post.slug}
-          className="block py-4 hover:scale-[1.005]"
-          href={"/blog/" + post.slug + "/"}
-        >
-          <article>
-            <h2 className={"text-3xl font-heading text-heading"}>
+        <div className="flex flex-col" key={post.data.title}>
+          <Link href={`/blog/${post.slug}`}>
+            <Image
+              src={post.data.image}
+              alt={post.data.title}
+              height={600}
+              width={600}
+              priority
+              className="rounded mb-4 bg-slate-800"
+            />
+            <p className="font-code text-xs uppercase mb-1">
+              {formatDate(post.data.publishedAt)}
+            </p>
+            <h2 className="font-heading text-heading leading-tight tracking-tight text-2xl">
               {post.data.title}
             </h2>
-            <p className="text-[13px] text-gray-700 dark:text-gray-300">
-              {new Date(post.data.publishedAt).toLocaleDateString("en", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </p>
-          </article>
-        </Link>
+          </Link>
+        </div>
       ))}
       <ThemeSwitch />
     </div>

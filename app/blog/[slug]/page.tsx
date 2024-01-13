@@ -47,7 +47,7 @@ export default async function PostPage({ params }) {
   const authorsInfo = await getAuthorDetails(data.authors);
 
   return (
-    <main className="container py-6 lg:py-12 max-w-[770px]">
+    <main className="container py-6 lg:py-12 max-w-[650px]">
       {data.publishedAt && (
         <time
           dateTime={data.publishedAt}
@@ -92,7 +92,7 @@ export default async function PostPage({ params }) {
           priority
         />
       )}
-      <div className="prose dark:prose-invert prose-zinc">
+      <div className="prose dark:prose-invert prose-zinc py-4">
         <Mdx
           source={content}
           options={{
@@ -103,7 +103,7 @@ export default async function PostPage({ params }) {
                   rehypeShikiji,
                   {
                     themes: {
-                      dark: "github-dark",
+                      dark: "poimandres",
                       light: "github-light",
                     },
                   },
