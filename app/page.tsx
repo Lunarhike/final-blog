@@ -1,4 +1,3 @@
-import ThemeSwitch from "@/components/theme-switch";
 import { readdir, readFile } from "fs/promises";
 import matter from "gray-matter";
 import Image from "next/image";
@@ -24,7 +23,7 @@ export default async function Home() {
   });
 
   return (
-    <div className="container grid grid-cols-3 gap-8 relative">
+    <div className="container flex flex-col py-3 gap-8 sm:grid sm:grid-cols-4 sm:py-6 relative min-h-screen">
       {posts.map((post) => (
         <div className="flex flex-col" key={post.data.title}>
           <Link href={`/blog/${post.slug}`}>
@@ -34,7 +33,7 @@ export default async function Home() {
               height={600}
               width={600}
               priority
-              className="rounded mb-4 bg-slate-800"
+              className="rounded mb-4 bg-white"
             />
             <p className="font-code text-xs uppercase mb-1">
               {formatDate(post.data.publishedAt)}
@@ -45,7 +44,6 @@ export default async function Home() {
           </Link>
         </div>
       ))}
-      <ThemeSwitch />
     </div>
   );
 }

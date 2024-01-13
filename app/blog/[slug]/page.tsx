@@ -47,7 +47,7 @@ export default async function PostPage({ params }) {
   const authorsInfo = await getAuthorDetails(data.authors);
 
   return (
-    <main className="container py-6 lg:py-12 max-w-[650px]">
+    <main className="container py-3 lg:py-6 max-w-[650px]">
       {data.publishedAt && (
         <time
           dateTime={data.publishedAt}
@@ -88,7 +88,7 @@ export default async function PostPage({ params }) {
           alt={data.title}
           width={719}
           height={719}
-          className="mt-8 mb-4 rounded-md bg-[#f0f0f0] transition-colors"
+          className="mt-8 mb-4 rounded-md bg-card transition-colors"
           priority
         />
       )}

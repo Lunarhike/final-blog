@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { IconJarLogoIcon } from "@radix-ui/react-icons";
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
@@ -17,11 +19,12 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      <option value="system">System</option>
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
-    </select>
+    <Button
+      className="w-8 h-8 rounded-full flex items-center justify-center relative"
+      onClick={(e) => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+      <IconJarLogoIcon className="w-4 h-4" />
+    </Button>
   );
 };
 
