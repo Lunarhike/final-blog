@@ -1,6 +1,5 @@
 import { readdir, readFile } from "fs/promises";
 import matter from "gray-matter";
-import rehypePrettyCode from "rehype-pretty-code";
 import "@/styles/mdx.css";
 import { Mdx } from "@/components/mdx";
 import path from "path";
@@ -86,9 +85,9 @@ export default async function PostPage({ params }) {
         <Image
           src={data.image}
           alt={data.title}
-          width={719}
-          height={719}
-          className="mt-8 mb-4 rounded-md bg-card transition-colors"
+          width={620}
+          height={400}
+          className="mt-8 object-cover object-center mb-4 rounded-md bg-card transition-colors"
           priority
         />
       )}

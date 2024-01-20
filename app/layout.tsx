@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Bricolage_Grotesque } from "next/font/google";
+import { Inter, JetBrains_Mono, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "@/styles//globals.css";
 import { cn } from "@/lib/utils";
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
 };
 
-const onest = Bricolage_Grotesque({
+const onest = Manrope({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
